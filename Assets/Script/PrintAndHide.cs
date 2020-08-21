@@ -17,8 +17,15 @@ public class PrintAndHide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         Debug.Log(gameObject.name + ": " + i);
         i++;
+        if (gameObject.tag == "Red" && i == 100)
+        {
+            gameObject.SetActive(false);
+        }
+        if (gameObject.tag == "Blue" && i > 200 && i < 250)
+        {
+            rend.enabled = false;
+        }
     }
 }
